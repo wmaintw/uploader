@@ -1,0 +1,12 @@
+<a href="/upload/new">Add Pic</a>
+<a href="/home">Home</a>
+<br />
+
+<table>
+  <% @pics.each do |pic| %>
+  <tr>
+    <td><%= pic.id %></td>
+    <td>http://174.140.165.104:8000/weeklyflower/<%= pic.filename %></td>
+  </tr>
+  <% end %>
+</table>

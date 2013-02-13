@@ -1,0 +1,16 @@
+<a href="/upload">Back</a><br /><br />
+
+<% if flash[:message] %>
+    <p><%= flash[:message] %></p>
+<% end %>
+
+<%= form_tag({:action => "create"}, :multipart => true) do %>
+    <div>
+      <label>File:</label>
+      <%= file_field_tag :file %>
+    </div>
+
+    <div>
+      <%= submit_tag "Upload" %>
+    </div>
+<% end  %>
